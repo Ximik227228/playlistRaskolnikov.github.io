@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Убираем прокрутку */
+}
+
+.background img {
+    position: fixed; /* Фон фиксирован на весь экран */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Растягиваем без искажений */
+    z-index: -1; /* Фон ниже всех элементов */
+}
+.playlist-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #24140a;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    right: 5%; /* Отступ от правого края */
+    transform: translateY(-50%); /* Центрируем по вертикали */
+}
+
+.gramophone {
+    position: relative;
+    left: -5%;
+    width: 650px;
+    height: auto;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+    z-index: 1; /* Поднимаем над фоном */
+    top: 90px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Расстояние между кнопкой и граммофоном */
+}
+
+.choose-record {
+    position: absolute;
+    left: 162px; /* Смещаем ближе к левому краю */
+    top: 90px; /* Смещаем вниз */
+    padding: 15px 24px;
+    font-size: 18px;
+    font-family: 'Georgia', serif;
+    color: #ffd1a3;
+    background: #a57241;
+    border: 2px solid #66432b;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10; /* Поднимаем кнопку выше всех элементов */
+}
+.record-wrapper {
+    display: flex;
+    flex-direction: column; /* Подпись под пластинкой */
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.choose-record:hover {
+    background: #684222;
+    border-color: #4d2b16;
+}
+.records-container {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* Два столбца */
+    gap: 10px 20px; /* Отступы: 10px между строками, 20px между столбцами */
+    justify-content: center; /* Центрирование пластинок */
+    align-items: center;
+}
+
+.record {
+    width: 100px;
+    height: 100px;
+    background: url('img/plastinki.png') no-repeat center/cover;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.record:hover {
+    transform: scale(1.1);
+}
+.middle-image {
+    display: block;
+    margin: 20px auto 10px;
+    position: relative;
+    top: 200px;
+    margin-left: 450px;
+}
