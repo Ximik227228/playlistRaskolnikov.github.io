@@ -11,8 +11,8 @@ function addRecords() {
         'audio/track2.mp3',
         'audio/track3.mp3',
         'audio/track4.mp3',
-        'audio/track6.mp3',
-        'audio/track5.mp3'
+        'audio/track5.mp3',
+        'audio/track6.mp3'
     ];
 
     // Добавляем 6 пластинок
